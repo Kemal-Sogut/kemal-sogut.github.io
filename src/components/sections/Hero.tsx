@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
         
         <h1 className="heading-xl mb-6 mt-4">
           <AnimatedText 
-            text="The world of custom" 
+            text="The world of custom Software Solutions" 
             className="block mb-2"
             gradient={false}
             words={true}
@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
             text="Software Solutions" 
             className="block text-shimmer"
             words={true}
-            delay={300}
+            delay={2}
           />
         </h1>
         
