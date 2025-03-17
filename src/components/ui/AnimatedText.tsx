@@ -48,16 +48,17 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
   
   const renderContent = () => {
     if (words) {
+      // Split by words and ensure there's proper spacing between them
       return text.split(' ').map((word, i) => (
         <span 
           key={i} 
           className={cn(
-            "inline-block opacity-0 transform translate-y-[15px] transition-all duration-500 ease-out",
+            "inline-block opacity-0 transform translate-y-[15px] transition-all duration-500 ease-out mr-[0.25em]",
             gradient && "text-gradient-primary"
           )}
           style={{ transitionDelay: `${i * 50}ms` }}
         >
-          {word}{' '}
+          {word}
         </span>
       ));
     }
