@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
             text="Software Solutions" 
             className="block text-shimmer"
             words={true}
-            delay={2}
+            delay={200}
           />
         </h1>
         
