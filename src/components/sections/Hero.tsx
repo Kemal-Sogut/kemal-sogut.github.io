@@ -11,6 +11,15 @@ const Hero: React.FC = () => {
 
   return (
     <section className="min-h-screen flex flex-col justify-center items-center px-6 relative overflow-hidden pt-20">
+      {/* Background image with overlay */}
+      <div className="absolute inset-0 z-0">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/hero-background.jpg')" }}
+        />
+        <div className="absolute inset-0 bg-black/50" /> {/* Dark overlay */}
+      </div>
+      
       {/* Gradient orbs */}
       <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full bg-antimony/10 blur-[100px] animate-pulse-slow"></div>
       <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-antimony/5 blur-[80px] animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
