@@ -1,7 +1,7 @@
 
 import React from 'react';
 import ServiceCard from '../ui/ServiceCard';
-import { Code, Globe, Smartphone, Award, Settings } from 'lucide-react';
+import { Code, Globe, Smartphone, Award, Settings, Database } from 'lucide-react';
 
 const servicesData = [
   {
@@ -28,6 +28,11 @@ const servicesData = [
     title: 'Workflow Automation',
     description: 'Custom automation solutions to streamline your business processes and increase operational efficiency.',
     icon: <Settings size={24} />,
+  },
+  {
+    title: 'Database Solutions',
+    description: 'Robust database architecture, optimization, and management services to ensure your data is secure, accessible, and efficient.',
+    icon: <Database size={24} />,
   },
 ];
 
