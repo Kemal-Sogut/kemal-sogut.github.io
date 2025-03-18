@@ -32,7 +32,7 @@ const Hero: React.FC = () => {
           />
           <AnimatedText 
             text="Software Solutions" 
-            className="block text-shimmer"
+            className="block bg-white text-white font-bold"
             words={true}
             delay={200}
           />
