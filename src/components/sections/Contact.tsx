@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import GlassCard from '../ui/GlassCard';
 import { Button } from '../ui/button';
+import { toast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -36,17 +38,38 @@ const Contact: React.FC = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
-      console.log('Form submitted:', formData);
+    try {
+      // Submit form data to Supabase
+      const { error } = await supabase
+        .from('contact_submissions')
+        .insert([formData]);
+      
+      if (error) {
+        throw error;
+      }
+      
+      // Show success toast
+      toast({
+        title: "Message Sent!",
+        description: "Thanks for reaching out! We'll get back to you soon.",
+      });
+      
+      // Reset form
       setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast({
+        title: "Something went wrong",
+        description: "Please try again later or contact us directly.",
+        variant: "destructive",
+      });
+    } finally {
       setIsSubmitting(false);
-      alert('Thanks for your message! We will get back to you soon.');
-    }, 1500);
+    }
   };
 
   return (
