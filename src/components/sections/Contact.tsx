@@ -119,7 +119,7 @@ const Contact: React.FC = () => {
                 disabled={isSubmitting}
                 className="w-full py-3 bg-antimony hover:bg-antimony-light text-white font-medium transition-all duration-300 rounded-lg"
               >
-                {isSubmitting ? 'Sending...' : 'Send Message'}
+                {isSubmitting ? 'Sending...' : 'Submit Request'}
               </Button>
             </form>
           </GlassCard>
