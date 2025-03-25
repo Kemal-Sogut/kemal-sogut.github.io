@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
       <div className="absolute inset-0 z-0">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('/hero-background.jpg')" }}
+          style={{ backgroundImage: "url('./hero-background.jpg')" }}
         />
         <div className="absolute inset-0 bg-black/60" /> {/* Slightly darker overlay for better contrast */}
       </div>
