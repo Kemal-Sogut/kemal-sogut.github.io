@@ -24,7 +24,7 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center">
-          <a href="#" className="text-2xl font-bold text-gradient-primary neon-glow">
+          <a href="#" className="text-2xl font-bold text-gradient">
             Antimony
           </a>
         </div>
@@ -34,7 +34,7 @@ const Navbar = () => {
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="text-sm font-medium text-slate-700 hover:text-accent transition-colors"
+              className="text-sm font-medium text-white/80 hover:text-white transition-colors"
             >
               {item}
             </a>
@@ -44,7 +44,7 @@ const Navbar = () => {
         <div>
           <a 
             href="#contact" 
-            className="px-5 py-2.5 rounded-full bg-accent hover:bg-accent-light text-white text-sm font-medium transition-all duration-300 ease-in-out neon-box"
+            className="px-5 py-2.5 rounded-full bg-antimony hover:bg-antimony-light text-white text-sm font-medium transition-all duration-300 ease-in-out"
           >
             Get Started
           </a>
