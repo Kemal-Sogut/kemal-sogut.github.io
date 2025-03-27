@@ -54,9 +54,9 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				antimony: {
-					DEFAULT: "#5F3D71",
-					light: "#7A5490",
-					dark: "#4C2E5C"
+					DEFAULT: "#4361ee",
+					light: "#647fff",
+					dark: "#3050dd"
 				}
 			},
 			borderRadius: {
