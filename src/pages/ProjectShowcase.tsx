@@ -63,9 +63,6 @@ const ProjectShowcase: React.FC = () => {
             {/* Title Section */}
             <div className="mb-12">
               <h1 className="heading-lg mb-6 text-gradient">{project.title}</h1>
-              
-             
-              
             </div>
             
             {/* Image Section */}
