@@ -65,6 +65,20 @@ const ProjectShowcase: React.FC = () => {
               <h1 className="heading-lg mb-6 text-gradient">{project.title}</h1>
             </div>
             
+             {/* Links */}
+             <div className="flex gap-4 mb-8">
+                {project.liveUrl && (
+                  <Button 
+                    variant="outline" 
+                    className="flex items-center gap-2 bg-white/5 border-white/10 hover:bg-white/10"
+                    onClick={() => window.open(project.liveUrl, '_blank')}
+                  >
+                    <ExternalLink size={16} />
+                    Live Demo
+                  </Button>
+                )}
+            </div>
+
             {/* Image Section */}
             <div className="mb-16 overflow-hidden rounded-2xl border border-white/10">
               <img 

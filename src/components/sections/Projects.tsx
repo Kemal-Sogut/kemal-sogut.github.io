@@ -77,6 +77,7 @@ const Projects: React.FC = () => {
               image={project.image}
               technologies={project.technologies}
               delay={index * 100}
+              liveUrl={project.liveUrl}
             />
           ))}
         </div>
