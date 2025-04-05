@@ -64,29 +64,8 @@ const ProjectShowcase: React.FC = () => {
             <div className="mb-12">
               <h1 className="heading-lg mb-6 text-gradient">{project.title}</h1>
               
-              {/* Links */}
-              <div className="flex gap-4 mb-8">
-                {project.liveUrl && (
-                  <Button 
-                    variant="outline" 
-                    className="flex items-center gap-2 bg-white/5 border-white/10 hover:bg-white/10"
-                    onClick={() => window.open(project.liveUrl, '_blank')}
-                  >
-                    <ExternalLink size={16} />
-                    Live Demo
-                  </Button>
-                )}
-                {project.githubUrl && (
-                  <Button 
-                    variant="outline" 
-                    className="flex items-center gap-2 bg-white/5 border-white/10 hover:bg-white/10"
-                    onClick={() => window.open(project.githubUrl, '_blank')}
-                  >
-                    <Github size={16} />
-                    View Code
-                  </Button>
-                )}
-              </div>
+             
+              
             </div>
             
             {/* Image Section */}
