@@ -21,8 +21,8 @@ export const projectsData = [
   },
 
   {
-    id: "uoWellness",
-    title: 'A wellness application for University of Ottawa',
+    id: "uo-wellness",
+    title: 'uoWellness',
     description: 'A wellness application designed for the University of Ottawa, providing students with resources and support for mental health and well-being.',
     image: './uowellness.png',
     technologies: ['React', 'Express', 'Docker,' ,'Docker', 'Prisma'],
