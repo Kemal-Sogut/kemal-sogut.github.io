@@ -68,7 +68,7 @@ const ProjectShowcase: React.FC = () => {
             {/* Image Section */}
             <div className="mb-16 overflow-hidden rounded-2xl border border-white/10">
               <img 
-                src={project.image} 
+                src={`.${project.image}`} 
                 alt={project.title} 
                 className="w-full object-cover transition-transform duration-500 hover:scale-105"
                 style={{ maxHeight: '500px' }}
