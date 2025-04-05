@@ -76,18 +76,11 @@ const Projects: React.FC = () => {
               description={project.description}
               image={project.image}
               technologies={project.technologies}
-              liveUrl={project.liveUrl}
-              githubUrl={project.githubUrl}
               delay={index * 100}
             />
           ))}
         </div>
         
-        <div className={`flex justify-center mt-12 transition-all duration-700 delay-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-          <Button className="bg-antimony hover:bg-antimony-light text-white" size="lg">
-            View All Projects
-          </Button>
-        </div>
       </div>
     </section>
   );
