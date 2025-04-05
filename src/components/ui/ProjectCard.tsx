@@ -2,10 +2,12 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
 import GlassCard from './GlassCard';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github, Info } from 'lucide-react';
 import { Button } from './button';
+import { Link } from 'react-router-dom';
 
 interface ProjectCardProps {
+  id: string;
   title: string;
   description: string;
   image: string;
@@ -16,6 +18,7 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ 
+  id,
   title, 
   description, 
   image,
@@ -68,7 +71,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           <p className="text-white/70 text-sm leading-relaxed mb-4">{description}</p>
           
           <div className="flex flex-wrap gap-2 mb-4">
-            {technologies.map((tech, index) => (
+            {technologies.slice(0, 3).map((tech, index) => (
               <span 
                 key={index}
                 className="px-2 py-1 bg-white/10 rounded-full text-xs"
@@ -76,9 +79,24 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 {tech}
               </span>
             ))}
+            {technologies.length > 3 && (
+              <span className="px-2 py-1 bg-white/10 rounded-full text-xs">
+                +{technologies.length - 3} more
+              </span>
+            )}
           </div>
           
-          <div className="mt-auto flex gap-2">
+          <div className="mt-auto flex gap-2 flex-wrap">
+            <Link to={`/project/${id}`}>
+              <Button 
+                variant="outline" 
+                size="sm" 
+                className="flex items-center gap-1.5 bg-antimony text-white border-antimony hover:bg-antimony-light transition-colors"
+              >
+                <Info size={14} />
+                Details
+              </Button>
+            </Link>
             {githubUrl && (
               <Button 
                 variant="outline" 

@@ -3,63 +3,7 @@ import React from 'react';
 import ProjectCard from '../ui/ProjectCard';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs';
 import { Button } from '../ui/button';
-
-const projectsData = [
-  {
-    title: 'E-Commerce Platform',
-    description: 'A fully responsive e-commerce platform with product filtering, cart management, and secure checkout.',
-    image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=800&h=500',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-    category: 'web',
-    liveUrl: 'https://example.com/ecommerce',
-    githubUrl: 'https://github.com/example/ecommerce',
-  },
-  {
-    title: 'Healthcare Management System',
-    description: 'A comprehensive healthcare management system for clinics to manage patient records, appointments, and billing.',
-    image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=800&h=500',
-    technologies: ['React', 'Express', 'PostgreSQL', 'Docker'],
-    category: 'web',
-    liveUrl: 'https://example.com/healthcare',
-    githubUrl: 'https://github.com/example/healthcare',
-  },
-  {
-    title: 'Inventory Management App',
-    description: 'A mobile application that helps businesses track inventory, manage suppliers, and generate reports.',
-    image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&q=80&w=800&h=500',
-    technologies: ['React Native', 'Firebase', 'Redux'],
-    category: 'mobile',
-    liveUrl: '',
-    githubUrl: 'https://github.com/example/inventory',
-  },
-  {
-    title: 'Business Analytics Dashboard',
-    description: 'An interactive dashboard displaying real-time business metrics with customizable widgets and data visualization.',
-    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800&h=500',
-    technologies: ['Vue.js', 'D3.js', 'GraphQL', 'AWS'],
-    category: 'web',
-    liveUrl: 'https://example.com/analytics',
-    githubUrl: 'https://github.com/example/analytics',
-  },
-  {
-    title: 'Social Media Scheduler',
-    description: 'A web application for scheduling and managing social media posts across multiple platforms.',
-    image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&q=80&w=800&h=500',
-    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Vercel'],
-    category: 'web',
-    liveUrl: 'https://example.com/scheduler',
-    githubUrl: 'https://github.com/example/scheduler',
-  },
-  {
-    title: 'Fitness Tracking App',
-    description: 'A mobile application for tracking workouts, nutrition, and health metrics with personalized recommendations.',
-    image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80&w=800&h=500',
-    technologies: ['Flutter', 'Dart', 'Firebase', 'TensorFlow'],
-    category: 'mobile',
-    liveUrl: '',
-    githubUrl: 'https://github.com/example/fitness',
-  },
-];
+import { projectsData } from '@/data/projects';
 
 const Projects: React.FC = () => {
   const [isVisible, setIsVisible] = React.useState(false);
@@ -127,6 +71,7 @@ const Projects: React.FC = () => {
           {filteredProjects.map((project, index) => (
             <ProjectCard
               key={index}
+              id={project.id}
               title={project.title}
               description={project.description}
               image={project.image}
