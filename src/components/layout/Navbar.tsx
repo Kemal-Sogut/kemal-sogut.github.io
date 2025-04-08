@@ -23,8 +23,12 @@ const Navbar = () => {
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <img className="w-15 h-15" src="./antimony-logo-colour-transparent.png" alt="antimony-logo" />
         <div className="flex items-center">
+          <img 
+            className="h-10 w-auto mr-3" 
+            src="./antimony-logo-colour-transparent.png" 
+            alt="Antimony logo" 
+          />
           <a href="#" className="text-2xl font-bold text-gradient">
             Antimony
           </a>
