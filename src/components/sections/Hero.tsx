@@ -34,23 +34,22 @@ const Hero: React.FC = () => {
         
         <h1 className="heading-xl mb-6 mt-4">
           <AnimatedText 
-            text="The world of custom" 
+            text="Built for You" 
             className="block mb-2"
             gradient={false}
             words={true}
           />
           <AnimatedText 
-            text="Software Solutions" 
+            text="Backed by Code." 
             className="block text-white font-bold"
             words={true}
             delay={200}
           />
         </h1>
         
-        <div className={`max-w-2xl mx-auto mb-10 transition-all duration-700 delay-300 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-8'}`}>
+        <div className={`max-w-2xl mx-auto mb-13 transition-all duration-700 delay-300 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-8'}`}>
           <p className="text-lg text-white/80">
-            Antimony crafts exceptional web applications, websites, and mobile apps
-            while optimizing SEO and automating workflows for businesses worldwide.
+          Scalable, maintainable, and professionally designed software solutions.
           </p>
         </div>
         
