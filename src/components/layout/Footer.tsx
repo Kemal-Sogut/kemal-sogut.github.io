@@ -1,6 +1,15 @@
 
 import React from 'react';
 import { cn } from '@/lib/utils';
+import { Facebook, Instagram, Linkedin, Twitter, Github } from 'lucide-react';
+
+const socialIcons = [
+  { name: 'twitter', icon: Twitter, url: 'https://twitter.com' },
+  { name: 'linkedin', icon: Linkedin, url: 'https://linkedin.com' },
+  { name: 'github', icon: Github, url: 'https://github.com' },
+  { name: 'instagram', icon: Instagram, url: 'https://instagram.com' },
+  { name: 'facebook', icon: Facebook, url: 'https://facebook.com' },
+];
 
 const Footer: React.FC = () => {
   return (
@@ -17,20 +26,21 @@ const Footer: React.FC = () => {
               Crafting exceptional digital experiences that transform businesses and delight users.
             </p>
             <div className="flex space-x-4">
-              {['twitter', 'linkedin', 'github', 'instagram'].map((platform) => (
-                <a 
-                  key={platform}
-                  href={`https://${platform}.com`} 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors"
-                >
-                  <span className="sr-only">{platform}</span>
-                  <svg className="w-5 h-5 text-white/70">
-                    <use href={`#icon-${platform}`}></use>
-                  </svg>
-                </a>
-              ))}
+              {socialIcons.map((item) => {
+                const IconComponent = item.icon;
+                return (
+                  <a 
+                    key={item.name}
+                    href={item.url} 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 hover:text-antimony transition-colors duration-300"
+                    aria-label={`Visit our ${item.name} page`}
+                  >
+                    <IconComponent size={20} />
+                  </a>
+                );
+              })}
             </div>
           </div>
           
