@@ -1,14 +1,12 @@
 
 import React from 'react';
 import { cn } from '@/lib/utils';
-import { Facebook, Instagram, Linkedin, Twitter, Github } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Twitter,} from 'lucide-react';
 
 const socialIcons = [
-  { name: 'twitter', icon: Twitter, url: 'https://twitter.com' },
-  { name: 'linkedin', icon: Linkedin, url: 'https://linkedin.com' },
-  { name: 'github', icon: Github, url: 'https://github.com' },
-  { name: 'instagram', icon: Instagram, url: 'https://instagram.com' },
-  { name: 'facebook', icon: Facebook, url: 'https://facebook.com' },
+  { name: 'twitter', icon: Twitter, url: 'https://x.com/AntimonyCanada' },
+  { name: 'linkedin', icon: Linkedin, url: 'https://www.linkedin.com/company/antimony-tech/' },
+  { name: 'instagram', icon: Instagram, url: 'https://www.instagram.com/antimonycanada/' },
 ];
 
 const Footer: React.FC = () => {
@@ -67,7 +65,7 @@ const Footer: React.FC = () => {
                   </svg>
                 </span>
                 <span className="text-sm text-white/70">
-                  123 Innovation Street, Tech City, TC 10101
+                  104 Goldridge Dr, Kanata ON K2T 1G1, Canada
                 </span>
               </li>
               <li className="flex items-center space-x-2">
@@ -77,7 +75,7 @@ const Footer: React.FC = () => {
                   </svg>
                 </span>
                 <a href="mailto:hello@antimony.com" className="text-sm text-white/70 hover:text-white transition-colors">
-                  hello@antimony.com
+                  info@antimonytech.com
                 </a>
               </li>
               <li className="flex items-center space-x-2">
@@ -87,7 +85,7 @@ const Footer: React.FC = () => {
                   </svg>
                 </span>
                 <a href="tel:+1234567890" className="text-sm text-white/70 hover:text-white transition-colors">
-                  +1 (234) 567-890
+                  +1 (873) 355-1089
                 </a>
               </li>
             </ul>
