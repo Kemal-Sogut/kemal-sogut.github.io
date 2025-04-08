@@ -4,6 +4,8 @@ import ProjectCard from '../ui/ProjectCard';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs';
 import { Button } from '../ui/button';
 import { projectsData } from '@/data/projects';
+import { ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Projects: React.FC = () => {
   const [isVisible, setIsVisible] = React.useState(false);
@@ -29,8 +31,8 @@ const Projects: React.FC = () => {
   }, []);
 
   const filteredProjects = activeTab === 'all' 
-    ? projectsData 
-    : projectsData.filter(project => project.category === activeTab);
+    ? projectsData.slice(0, 3) // Show only first 3 projects on homepage
+    : projectsData.filter(project => project.category === activeTab).slice(0, 3);
 
   return (
     <section id="projects" ref={sectionRef} className="py-24 px-6 relative">
@@ -82,6 +84,14 @@ const Projects: React.FC = () => {
           ))}
         </div>
         
+        <div className={`mt-12 text-center transition-all duration-700 delay-300 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-4'}`}>
+          <Link to="/projects">
+            <Button className="bg-antimony hover:bg-antimony-light text-white">
+              View All Projects
+              <ChevronRight size={16} className="ml-1" />
+            </Button>
+          </Link>
+        </div>
       </div>
     </section>
   );
