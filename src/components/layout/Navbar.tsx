@@ -20,7 +20,7 @@ const Navbar = () => {
     <header 
       className={cn(
         "fixed top-0 left-0 right-0 z-50 px-6 transition-all duration-300 ease-in-out",
-        isScrolled ? "py-4 glass-morphism" : "py-6"
+        isScrolled ? "py-4 bg-white/80 backdrop-blur-lg shadow-sm" : "py-6"
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -32,7 +32,7 @@ const Navbar = () => {
               alt="Antimony logo" 
             />
           </Link>
-          <Link to="/" className="text-2xl font-bold text-gradient">
+          <Link to="/" className="text-2xl font-bold text-foreground">
             Antimony
           </Link>
         </div>
@@ -40,25 +40,25 @@ const Navbar = () => {
         <nav className="hidden md:flex space-x-8">
           <Link
             to="/#services"
-            className="text-sm font-medium text-white/80 hover:text-white transition-colors"
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
           >
             Services
           </Link>
           <Link
             to="/#features"
-            className="text-sm font-medium text-white/80 hover:text-white transition-colors"
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
           >
             Features
           </Link>
           <Link
             to="/projects"
-            className="text-sm font-medium text-white/80 hover:text-white transition-colors"
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
           >
             Projects
           </Link>
           <Link
             to="/#contact"
-            className="text-sm font-medium text-white/80 hover:text-white transition-colors"
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
           >
             Contact
           </Link>
@@ -67,7 +67,7 @@ const Navbar = () => {
         <div>
           <Link 
             to="/#contact" 
-            className="px-5 py-2.5 rounded-full bg-antimony hover:bg-antimony-light text-white text-sm font-medium transition-all duration-300 ease-in-out"
+            className="px-5 py-2.5 rounded-full bg-accent hover:bg-accent/90 text-white text-sm font-medium transition-all duration-300 ease-in-out"
           >
             Get Started
           </Link>
