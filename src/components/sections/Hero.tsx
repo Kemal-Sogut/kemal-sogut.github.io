@@ -16,12 +16,8 @@ const Hero: React.FC = () => {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: "url('./hero-background.jpg')" }}
         />
-        <div className="absolute inset-0 bg-black/60" /> {/* Slightly darker overlay for better contrast */}
+        <div className="absolute inset-0" /> {/* Slightly darker overlay for better contrast */}
       </div>
-      
-      {/* Gradient orbs */}
-      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full bg-antimony/10 blur-[100px] animate-pulse-slow"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-antimony/5 blur-[80px] animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
       
       {/* Content */}
       <div className="max-w-5xl mx-auto text-center relative z-10">
