@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import AnimatedText from '../ui/AnimatedText';
 
@@ -56,7 +55,7 @@ const Hero: React.FC = () => {
         <div className={`flex flex-col sm:flex-row items-center justify-center gap-4 transition-all duration-700 delay-500 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-8'}`}>
           <a 
             href="#services" 
-            className="px-8 py-3 rounded-full bg-antimony hover:bg-antimony-light text-white font-medium transition-all duration-300"
+            className="px-8 py-3 rounded-full bg-[#031D44] hover:bg-[#031D44]/90 text-white font-medium transition-all duration-300"
           >
             Explore Services
           </a>

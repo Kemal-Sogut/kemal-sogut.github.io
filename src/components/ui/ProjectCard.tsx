@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { cn } from '@/lib/utils';
 import GlassCard from './GlassCard';
@@ -91,7 +90,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               <Button 
                 variant="outline" 
                 size="sm" 
-                className="flex items-center gap-1.5 bg-antimony text-white border-antimony hover:bg-antimony-light transition-colors"
+                className="flex items-center gap-1.5 bg-[#031D44] text-white border-[#031D44] hover:bg-[#031D44]/90 transition-colors"
               >
                 <Info size={14} />
                 Details

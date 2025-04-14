@@ -1,4 +1,3 @@
-
 import React from 'react';
 import ProjectCard from '../ui/ProjectCard';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs';
@@ -86,7 +85,7 @@ const Projects: React.FC = () => {
         
         <div className={`mt-12 text-center transition-all duration-700 delay-300 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-4'}`}>
           <Link to="/projects">
-            <Button className="bg-antimony hover:bg-antimony-light text-white">
+            <Button className="bg-[#031D44] hover:bg-[#031D44]/90 text-white">
               View All Projects
               <ChevronRight size={16} className="ml-1" />
             </Button>

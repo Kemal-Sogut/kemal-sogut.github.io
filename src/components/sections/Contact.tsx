@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import GlassCard from '../ui/GlassCard';
 import { Button } from '../ui/button';
@@ -140,7 +139,7 @@ const Contact: React.FC = () => {
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-3 bg-antimony hover:bg-antimony-light text-white font-medium transition-all duration-300 rounded-lg"
+                className="w-full py-3 bg-[#031D44] hover:bg-[#031D44]/90 text-white font-medium transition-all duration-300 rounded-lg"
               >
                 {isSubmitting ? 'Sending...' : 'Submit Request'}
               </Button>
