@@ -55,13 +55,13 @@ const Projects: React.FC = () => {
         <div className={`flex justify-center mb-10 transition-all duration-700 delay-200 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-4'}`}>
           <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full max-w-md">
             <TabsList className="grid w-full grid-cols-3 bg-background/50 border border-border">
-              <TabsTrigger value="all" className="data-[state=active]:bg-[#031D44] data-[state=active]:text-white">
+              <TabsTrigger value="all" className="data-[state=active]:bg-antimony data-[state=active]:text-white">
                 All
               </TabsTrigger>
-              <TabsTrigger value="web" className="data-[state=active]:bg-[#031D44] data-[state=active]:text-white">
+              <TabsTrigger value="web" className="data-[state=active]:bg-antimony data-[state=active]:text-white">
                 Web
               </TabsTrigger>
-              <TabsTrigger value="mobile" className="data-[state=active]:bg-[#031D44] data-[state=active]:text-white">
+              <TabsTrigger value="mobile" className="data-[state=active]:bg-antimony data-[state=active]:text-white">
                 Mobile
               </TabsTrigger>
             </TabsList>

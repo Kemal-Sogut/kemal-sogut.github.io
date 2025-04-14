@@ -20,7 +20,7 @@ const Navbar = () => {
     <header 
       className={cn(
         "fixed top-0 left-0 right-0 z-50 px-6 transition-all duration-300 ease-in-out",
-        isScrolled ? "py-4 shadow-sm" : "py-6"
+        isScrolled ? "py-4 bg-white/80 backdrop-blur-lg shadow-sm" : "py-6"
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -67,7 +67,7 @@ const Navbar = () => {
         <div>
           <Link 
             to="/#contact" 
-            className="px-5 py-2.5 rounded-full bg-[#031D44] hover:bg-[#031D44]/90 text-white text-sm font-medium transition-all duration-300 ease-in-out"
+            className="px-5 py-2.5 rounded-full bg-accent hover:bg-accent/90 text-white text-sm font-medium transition-all duration-300 ease-in-out"
           >
             Get Started
           </Link>
