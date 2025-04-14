@@ -71,7 +71,7 @@ const Hero: React.FC = () => {
       
       {/* Scroll indicator */}
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center opacity-60 hover:opacity-100 transition-opacity">
-        <span className="text-sm mb-2">Scroll to explore</span>
+        <span className="text-sm text-white mb-2">Scroll to explore</span>
         <div className="w-[30px] h-[50px] rounded-full border-2 border-white/20 flex justify-center p-2">
           <div className="w-1.5 h-1.5 rounded-full bg-white animate-bounce"></div>
         </div>

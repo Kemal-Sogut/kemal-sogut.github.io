@@ -55,13 +55,13 @@ const Features: React.FC = () => {
     <section id="features" ref={sectionRef} className="py-24 px-6 relative">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <span className={`inline-block px-4 py-1.5 bg-white/5 rounded-full text-sm font-medium border border-white/10 mb-4 transition-all duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+          <span className={`inline-block px-4 py-1.5 bg-accent/10 rounded-full text-sm font-medium text-accent border border-accent/20 mb-4 transition-all duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
             Why Choose Us
           </span>
-          <h2 className={`heading-lg mb-4 transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-4'}`}>
-            Features That <span className="text-gradient">Set Us Apart</span>
+          <h2 className={`heading-lg mb-4 text-foreground transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-4'}`}>
+            Features That <span className="text-gradient-primary">Set Us Apart</span>
           </h2>
-          <p className={`text-white/70 max-w-2xl mx-auto transition-all duration-700 delay-100 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-4'}`}>
+          <p className={`text-muted-foreground max-w-2xl mx-auto transition-all duration-700 delay-100 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-4'}`}>
             Antimony delivers exceptional digital experiences with attention to detail and commitment to quality.
           </p>
         </div>

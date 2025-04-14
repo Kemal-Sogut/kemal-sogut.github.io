@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -80,16 +81,16 @@
   }
   
   .text-gradient-primary {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-antimony-light via-antimony to-antimony-dark;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent via-accent to-accent-dark;
   }
 
   .text-shimmer {
     @apply bg-clip-text text-transparent bg-[length:200%_auto] animate-text-shimmer;
     background-image: linear-gradient(
       -60deg,
-      #6366f1 20%,
-      #ffffff 40%,
-      #6366f1 60%
+      #4361ee 20%,
+      #647fff 40%,
+      #4361ee 60%
     );
   }
 

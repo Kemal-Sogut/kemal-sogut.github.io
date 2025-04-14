@@ -2,7 +2,6 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
 import GlassCard from './GlassCard';
-import { LucideIcon } from 'lucide-react';
 
 interface ServiceCardProps {
   title: string;
@@ -48,15 +47,15 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         isVisible && "opacity-100 translate-y-0"
       )}
     >
-      <GlassCard hover={true} className="h-full">
+      <GlassCard hover={true} className="h-full bg-white shadow-md border border-border">
         <div className="flex flex-col h-full">
-          <div className="mb-6 bg-antimony/10 p-3 rounded-full w-14 h-14 flex items-center justify-center">
-            <div className="text-antimony">
+          <div className="mb-6 bg-accent/10 p-3 rounded-full w-14 h-14 flex items-center justify-center">
+            <div className="text-accent">
               {icon}
             </div>
           </div>
-          <h3 className="text-xl font-bold mb-3">{title}</h3>
-          <p className="text-white/70 text-sm leading-relaxed">{description}</p>
+          <h3 className="text-xl font-bold mb-3 text-foreground">{title}</h3>
+          <p className="text-muted-foreground text-sm leading-relaxed">{description}</p>
         </div>
       </GlassCard>
     </div>

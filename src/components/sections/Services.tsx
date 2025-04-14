@@ -60,18 +60,18 @@ const Services: React.FC = () => {
 
   return (
     <section id="services" ref={sectionRef} className="py-24 px-6 relative">
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/20 to-transparent"></div>
       
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <span className={`inline-block px-4 py-1.5 bg-white/5 rounded-full text-sm font-medium border border-white/10 mb-4 transition-all duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+          <span className={`inline-block px-4 py-1.5 bg-accent/10 rounded-full text-sm font-medium text-accent border border-accent/20 mb-4 transition-all duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
             Our Services
           </span>
-          <h2 className={`heading-lg mb-4 transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-4'}`}>
-            <span className="text-gradient">Comprehensive Solutions</span> <br />
+          <h2 className={`heading-lg mb-4 text-foreground transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-4'}`}>
+            <span className="text-gradient-primary">Comprehensive Solutions</span> <br />
             for Your Digital Needs
           </h2>
-          <p className={`text-white/70 max-w-2xl mx-auto transition-all duration-700 delay-100 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-4'}`}>
+          <p className={`text-muted-foreground max-w-2xl mx-auto transition-all duration-700 delay-100 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-4'}`}>
             We provide end-to-end digital solutions that help businesses grow, optimize operations,
             and create meaningful connections with their audience.
           </p>

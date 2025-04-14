@@ -36,18 +36,18 @@ const Projects: React.FC = () => {
 
   return (
     <section id="projects" ref={sectionRef} className="py-24 px-6 relative">
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/20 to-transparent"></div>
       
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <span className={`inline-block px-4 py-1.5 bg-white/5 rounded-full text-sm font-medium border border-white/10 mb-4 transition-all duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+          <span className={`inline-block px-4 py-1.5 bg-accent/10 rounded-full text-sm font-medium text-accent border border-accent/20 mb-4 transition-all duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
             Our Portfolio
           </span>
-          <h2 className={`heading-lg mb-4 transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-4'}`}>
-            <span className="text-gradient">Recent Projects</span> <br />
+          <h2 className={`heading-lg mb-4 text-foreground transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-4'}`}>
+            <span className="text-gradient-primary">Recent Projects</span> <br />
             We've Delivered
           </h2>
-          <p className={`text-white/70 max-w-2xl mx-auto transition-all duration-700 delay-100 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-4'}`}>
+          <p className={`text-muted-foreground max-w-2xl mx-auto transition-all duration-700 delay-100 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-4'}`}>
             Explore our portfolio of successful projects that showcase our expertise in creating
             innovative and effective digital solutions for diverse industries.
           </p>
@@ -55,7 +55,7 @@ const Projects: React.FC = () => {
         
         <div className={`flex justify-center mb-10 transition-all duration-700 delay-200 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-4'}`}>
           <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full max-w-md">
-            <TabsList className="grid w-full grid-cols-3 bg-white/5 border border-white/10">
+            <TabsList className="grid w-full grid-cols-3 bg-background/50 border border-border">
               <TabsTrigger value="all" className="data-[state=active]:bg-antimony data-[state=active]:text-white">
                 All
               </TabsTrigger>
