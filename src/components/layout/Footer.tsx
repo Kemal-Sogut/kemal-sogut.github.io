@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { cn } from '@/lib/utils';
 import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
@@ -32,7 +31,7 @@ const Footer: React.FC = () => {
                     href={item.url} 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full bg-background flex items-center justify-center hover:bg-accent/10 hover:text-accent transition-colors duration-300"
+                    className="w-10 h-10 rounded-full bg-background flex items-center justify-center hover:bg-accent/10 hover:text-accent transition-colors duration-300 text-foreground"
                     aria-label={`Visit our ${item.name} page`}
                   >
                     <IconComponent size={20} />
