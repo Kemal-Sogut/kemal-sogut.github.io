@@ -16,6 +16,17 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleSectionClick = (sectionId: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
+    // Only handle scroll behavior on the homepage
+    if (window.location.pathname === '/') {
+      e.preventDefault();
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
   return (
     <header 
       className={cn(
@@ -40,12 +51,14 @@ const Navbar = () => {
         <nav className="hidden md:flex space-x-8">
           <Link
             to="/#services"
+            onClick={handleSectionClick('services')}
             className="text-medium font-medium text-muted-foreground hover:text-foreground transition-colors"
           >
             Services
           </Link>
           <Link
             to="/#features"
+            onClick={handleSectionClick('features')}
             className="text-medium font-medium text-muted-foreground hover:text-foreground transition-colors"
           >
             Features
@@ -58,6 +71,7 @@ const Navbar = () => {
           </Link>
           <Link
             to="/#contact"
+            onClick={handleSectionClick('contact')}
             className="text-medium font-medium text-muted-foreground hover:text-foreground transition-colors"
           >
             Contact
@@ -67,6 +81,7 @@ const Navbar = () => {
         <div>
           <Link 
             to="/#contact" 
+            onClick={handleSectionClick('contact')}
             className="px-5 py-2.5 rounded-full bg-[#031D44] hover:bg-[#fff] text-white hover:border-black hover:text-black text-sm font-medium transition-all duration-300 ease-in-out"
           >
             Get Started
