@@ -51,7 +51,7 @@ const Navbar = () => {
             Features
           </Link>
           <Link
-            to="/#projects"
+            to="/projects"
             className="text-medium font-medium text-muted-foreground hover:text-foreground transition-colors"
           >
             Projects

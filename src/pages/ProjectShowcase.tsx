@@ -62,7 +62,7 @@ const ProjectShowcase: React.FC = () => {
             
             {/* Title Section */}
             <div className="mb-12">
-              <h1 className="heading-lg mb-6 text-gradient">{project.title}</h1>
+              <h1 className="heading-lg mb-6 text-gradient-primary">{project.title}</h1>
             </div>
             
              {/* Links */}
@@ -70,7 +70,7 @@ const ProjectShowcase: React.FC = () => {
                 {project.liveUrl && (
                   <Button 
                     variant="outline" 
-                    className="flex items-center gap-2 bg-white border-fpreground "
+                    className="text:primary flex items-center gap-2 bg-white border-foreground "
                     onClick={() => window.open(project.liveUrl, '_blank')}
                   >
                     <ExternalLink size={16} />
@@ -100,12 +100,12 @@ const ProjectShowcase: React.FC = () => {
             
             {/* Tech Stack Section */}
             <GlassCard>
-              <h2 className="text-2xl font-bold mb-4">Technology Stack</h2>
+              <h2 className="text-2xl font-bold mb-4 text-primary">Technology Stack</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {project.technologies.map((tech, index) => (
                   <div 
                     key={index} 
-                    className="bg-white/5 border border-white/10 rounded-lg p-4 flex items-center transition-all hover:bg-white/10"
+                    className="bg-white/5 text-primary border border-white/10 rounded-lg p-4 flex items-center transition-all hover:bg-white/10"
                   >
                     <div className="bg-antimony/20 rounded-full w-10 h-10 flex items-center justify-center mr-3">
                       <span className="text-antimony">{tech.charAt(0)}</span>
