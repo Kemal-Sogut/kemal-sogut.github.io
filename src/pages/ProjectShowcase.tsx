@@ -55,7 +55,7 @@ const ProjectShowcase: React.FC = () => {
         <div className="max-w-5xl mx-auto">
           <div className={`transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-8'}`}>
             {/* Back button */}
-            <Link to="/#projects" className="inline-flex items-center text-white/70 hover:text-white mb-8 transition-colors">
+            <Link to="/#projects" className="inline-flex items-center text-foreground mb-8 transition-colors">
               <ArrowLeft className="mr-2" size={16} />
               Back to Projects
             </Link>
@@ -70,7 +70,7 @@ const ProjectShowcase: React.FC = () => {
                 {project.liveUrl && (
                   <Button 
                     variant="outline" 
-                    className="flex items-center gap-2 bg-white/5 border-white/10 hover:bg-white/10"
+                    className="flex items-center gap-2 bg-white border-fpreground "
                     onClick={() => window.open(project.liveUrl, '_blank')}
                   >
                     <ExternalLink size={16} />
@@ -92,15 +92,10 @@ const ProjectShowcase: React.FC = () => {
             {/* Description Section */}
             <GlassCard className="mb-16">
               <h2 className="text-2xl font-bold mb-4">Project Description</h2>
-              <p className="text-white/80 leading-relaxed mb-6">
+              <p className="text-black leading-relaxed mb-6">
                 {project.description}
               </p>
-              <p className="text-white/80 leading-relaxed">
-                This is an extended description that provides more details about the project. 
-                Here we can discuss the challenges faced, the solutions implemented, and the 
-                overall impact of the project. This section gives a comprehensive understanding 
-                of the project's scope and execution.
-              </p>
+              
             </GlassCard>
             
             {/* Tech Stack Section */}

@@ -40,25 +40,25 @@ const Navbar = () => {
         <nav className="hidden md:flex space-x-8">
           <Link
             to="/#services"
-            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            className="text-medium font-medium text-muted-foreground hover:text-foreground transition-colors"
           >
             Services
           </Link>
           <Link
             to="/#features"
-            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            className="text-medium font-medium text-muted-foreground hover:text-foreground transition-colors"
           >
             Features
           </Link>
           <Link
-            to="/projects"
-            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            to="/#projects"
+            className="text-medium font-medium text-muted-foreground hover:text-foreground transition-colors"
           >
             Projects
           </Link>
           <Link
             to="/#contact"
-            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            className="text-medium font-medium text-muted-foreground hover:text-foreground transition-colors"
           >
             Contact
           </Link>
@@ -67,7 +67,7 @@ const Navbar = () => {
         <div>
           <Link 
             to="/#contact" 
-            className="px-5 py-2.5 rounded-full bg-[#031D44] hover:bg-[#031D44]/90 text-white text-sm font-medium transition-all duration-300 ease-in-out"
+            className="px-5 py-2.5 rounded-full bg-[#031D44] hover:bg-[#fff] text-white hover:border-black hover:text-black text-sm font-medium transition-all duration-300 ease-in-out"
           >
             Get Started
           </Link>
