@@ -43,13 +43,11 @@ const ProjectsPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
           <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-8'}`}>
-            <span className="inline-block px-4 py-1.5 bg-white/5 rounded-full text-sm font-medium border border-white/10 mb-4">
-              Our Portfolio
-            </span>
+            
             <h1 className="heading-lg mb-4">
-              <span className="text-gradient">Explore Our Projects</span>
+              <span className="text-gradient-primary">Explore Our Projects</span>
             </h1>
-            <p className="text-white/70 max-w-2xl mx-auto">
+            <p className="text-black max-w-2xl mx-auto">
               Discover our portfolio of successful projects that showcase our expertise in creating
               innovative and effective digital solutions for diverse industries.
             </p>
@@ -59,13 +57,13 @@ const ProjectsPage: React.FC = () => {
           <div className={`flex justify-center mb-12 transition-all duration-700 delay-200 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-4'}`}>
             <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full max-w-md">
               <TabsList className="grid w-full grid-cols-3 bg-white/5 border border-white/10">
-                <TabsTrigger value="all" className="data-[state=active]:bg-antimony data-[state=active]:text-white">
+                <TabsTrigger value="all" className="data-[state=active]:bg-[#031D44] data-[state=active]:text-white">
                   All
                 </TabsTrigger>
-                <TabsTrigger value="web" className="data-[state=active]:bg-antimony data-[state=active]:text-white">
+                <TabsTrigger value="web" className="data-[state=active]:bg-[#031D44] data-[state=active]:text-white">
                   Web
                 </TabsTrigger>
-                <TabsTrigger value="mobile" className="data-[state=active]:bg-antimony data-[state=active]:text-white">
+                <TabsTrigger value="mobile" className="data-[state=active]:bg-[#031D44] data-[state=active]:text-white">
                   Mobile
                 </TabsTrigger>
               </TabsList>
@@ -91,26 +89,26 @@ const ProjectsPage: React.FC = () => {
                   <div className="flex flex-col">
                     <h2 className="text-2xl font-bold mb-3">{project.title}</h2>
                     
-                    <p className="text-white/80 mb-6">{project.description}</p>
+                    <p className="text-black mb-6">{project.description}</p>
                     
                     <div className="flex flex-wrap gap-2 mb-6">
                       {project.technologies.map((tech, i) => (
                         <span 
                           key={i}
-                          className="px-3 py-1.5 bg-white/10 rounded-full text-sm"
+                          className="text-accent px-3 py-1.5 bg-white/10 rounded-full text-sm"
                         >
                           {tech}
                         </span>
                       ))}
                     </div>
                     
-                    <p className="text-white/70 mb-8">
+                    <p className="text-black mb-8">
                       This project showcases our ability to deliver high-quality solutions that meet client needs while maintaining excellent user experience and modern design principles.
                     </p>
                     
                     <div className="mt-auto flex gap-3">
                       <Link to={`/project/${project.id}`}>
-                        <Button className="bg-antimony hover:bg-antimony-light text-white">
+                        <Button className="bg-[#031D44] hover:bg-white text-white hover:text-[#031D44] ">
                           View Details
                           <ChevronRight size={16} className="ml-1" />
                         </Button>
@@ -119,7 +117,7 @@ const ProjectsPage: React.FC = () => {
                       {project.liveUrl && (
                         <Button 
                           variant="outline" 
-                          className="flex items-center gap-1.5 bg-white/5 border-white/10 hover:bg-white/10"
+                          className="flex items-center gap-1.5 bg-white/5 text-[#031D44] hover:text-white border-white/10 hover:bg-[#031D44]"
                           onClick={() => window.open(project.liveUrl, '_blank')}
                         >
                           <ExternalLink size={16} />
