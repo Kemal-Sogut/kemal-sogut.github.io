@@ -70,8 +70,7 @@ const Navbar = () => {
             Projects
           </Link>
           <Link
-            to="/#contact"
-            onClick={handleSectionClick('contact')}
+            to="/contact"
             className="text-medium font-medium text-muted-foreground hover:text-foreground transition-colors"
           >
             Contact
@@ -80,8 +79,7 @@ const Navbar = () => {
 
         <div>
           <Link 
-            to="/#contact" 
-            onClick={handleSectionClick('contact')}
+            to="/contact" 
             className="px-5 py-2.5 rounded-full bg-[#031D44] hover:bg-[#fff] text-white hover:border-black hover:text-black text-sm font-medium transition-all duration-300 ease-in-out"
           >
             Get Started
