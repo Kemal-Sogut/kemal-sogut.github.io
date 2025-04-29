@@ -70,7 +70,7 @@ const ProjectShowcase: React.FC = () => {
                 {project.liveUrl && (
                   <Button 
                     variant="outline" 
-                    className="text:primary flex items-center gap-2 bg-white border-foreground "
+                    className="text-primary flex items-center gap-2 bg-white border-primary "
                     onClick={() => window.open(project.liveUrl, '_blank')}
                   >
                     <ExternalLink size={16} />
