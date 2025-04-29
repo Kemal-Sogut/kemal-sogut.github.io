@@ -91,7 +91,7 @@ const ProjectShowcase: React.FC = () => {
             
             {/* Description Section */}
             <GlassCard className="mb-16">
-              <h2 className="text-2xl font-bold mb-4">Project Description</h2>
+              <h2 className="text-gradient-primary text-2xl font-bold mb-4">Project Description</h2>
               <p className="text-black leading-relaxed mb-6">
                 {project.description}
               </p>
