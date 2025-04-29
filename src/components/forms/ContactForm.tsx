@@ -4,14 +4,17 @@ import { Button } from '@/components/ui/button';
 import { toast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 import GlassCard from '@/components/ui/GlassCard';
+import { Database } from '@/integrations/supabase/types';
 
 interface ContactFormProps {
   className?: string;
   showHeader?: boolean;
 }
 
+type ContactSubmission = Database['public']['Tables']['contact_submissions']['Insert'];
+
 const ContactForm: React.FC<ContactFormProps> = ({ className = '', showHeader = false }) => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<ContactSubmission>({
     name: '',
     email: '',
     message: ''
@@ -51,7 +54,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = '', showHeader = 
       // Submit form data to Supabase
       const { error } = await supabase
         .from('contact_submissions')
-        .insert([formData]);
+        .insert(formData);
       
       if (error) {
         throw error;
