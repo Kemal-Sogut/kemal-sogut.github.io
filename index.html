@@ -9,11 +9,19 @@
     <meta name="author" content="Kemal Sogut" />
     <meta property="og:image" content="./og-antimony.jpg" />
     <script>
-      // Single Page Apps for GitHub Pages
-      // MIT License
-      // https://github.com/rafgraph/spa-github-pages
-      (function(l) {
-        if (l.search[1] === '/' ) {
+      // Single Page Apps for GitHub Pages/Netlify
+      // Modified from: https://github.com/rafgraph/spa-github-pages
+      (function() {
+        // Check if we have a redirect path stored from a 404 page
+        var redirectPath = sessionStorage.getItem('redirectPath');
+        if (redirectPath) {
+          sessionStorage.removeItem('redirectPath');
+          history.replaceState(null, null, redirectPath);
+        }
+        
+        // Handle query parameters
+        var l = window.location;
+        if (l.search[1] === '/') {
           var decoded = l.search.slice(1).split('&').map(function(s) { 
             return s.replace(/~and~/g, '&')
           }).join('?');
@@ -21,7 +29,7 @@
               l.pathname.slice(0, -1) + decoded + l.hash
           );
         }
-      }(window.location))
+      })();
     </script>
   </head>
 
